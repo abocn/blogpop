@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        article {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        a.button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .blog-title {
+            margin-bottom: 5px;
+        }
+        .blog-subtitle {
+            margin-bottom: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>My Blog</h1>
+    <p class="blog-subtitle">Powered by <a href="https://github.com/ihatenodejs/blogpop">free and open source software</a>.</p>
+    <div>
+        <% if (isAuthenticated) { %>
+            <a href="/admin/dashboard" class="button">Dashboard</a>
+            <a href="/admin/logout" class="button secondary">Logout</a>
+        <% } else { %>
+            <a href="/admin/login" class="button secondary">Login</a>
+        <% } %>
+    </div>
+</div>
+<% posts.forEach(function(post){ %>
+    <article>
+        <h1><%= post.title %></h1>
+        <div class="date"><%= post.createdAt.toLocaleDateString() %></div>
+        <%- marked(post.content) %>
+    </article>
+<% }); %>
+</body>
+</html>

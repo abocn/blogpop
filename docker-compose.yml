@@ -1,0 +1,18 @@
+services:
+  blog:
+    build: ./
+    ports:
+      - "2389:2389"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
