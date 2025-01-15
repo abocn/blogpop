@@ -30,10 +30,28 @@ export default function CreatePost() {
     setContent(value || "")
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    const date = Math.floor(Date.now() / 1000);
     e.preventDefault()
-    // TODO: handle form submission here!
-    console.log({ title, description, category, slug, content })
+    try {
+      const response = await fetch('http://localhost:3001/api/posts/new', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title, description, category, slug, content, date }),
+      });
+
+      if (!response.ok) {
+      throw new Error('Failed to create post');
+      }
+
+      const data = await response.json();
+      console.log('Success:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    console.log({ title, description, category, slug, content, date })
   }
 
   return (
