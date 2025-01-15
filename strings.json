@@ -1,0 +1,57 @@
+{
+    "latestPostsHeader": "Latest Posts",
+    "categoriesHeader": "Categories",
+    "adminHeader": "Admin",
+    "adminNewPostHeader": "New Post",
+    "adminNewUserHeader": "New User",
+    "usersHeader": "Users",
+
+    "homeLinkTextNavbar": "Home",
+    "categoriesLinkTextNavbar": "Categories",
+    "adminLinkTextNavbar": "Admin",
+
+    "totalPostsCardTitle": "Total Posts",
+    "newPostCardTitle": "Create New Post",
+    "newUserCardTitle": "Create User",
+    "totalUsersCardTitle": "Total Users",
+    "totalUsersLoggedInMonthCardTitle": "Users Logged In",
+
+    "newPostTitleFieldLabel": "Title",
+    "newPostDescriptionFieldLabel": "Description",
+    "newPostCategoryFieldLabel": "Category",
+    "newPostSlugFieldLabel": "Slug",
+    "newPostContentFieldLabel": "Post Content",
+
+    "newUserNameFieldLabel": "Name",
+    "newUserEmailFieldLabel": "Email",
+    "newUserPasswordFieldLabel": "Password",
+
+    "newPostTitleFieldPlaceholder": "Enter post title",
+    "newPostDescriptionFieldPlaceholder": "Enter post description",
+    "newPostCategoryFieldPlaceholder": "Select a category",
+    "newPostSlugFieldPlaceholder": "Enter post slug (i.e. /example-slug)",
+
+    "newUserNameFieldPlaceholder": "Enter desired username",
+    "newUserEmailFieldPlaceholder": "Enter user email",
+    "newUserPasswordFieldPlaceholder": "Enter user password",
+
+    "categoriesCardDescriptionPre": "Explore posts from",
+
+    "totalUsersLoggedInMonthCardDescription": "This month",
+
+    "categoriesLastUpdatedLabel": "Last updated",
+
+    "categoriesViewPostsFromLinkText": "View posts",
+    "recentPostsReadMoreFromLinkText": "Read more",
+
+    "categoriesPostUnitSingle": "post",
+    "categoriesPostUnitPlural": "posts",
+
+    "categoriesLabelSidebar": "Categories",
+    "recentPostsLabelSidebar": "Recent Posts",
+
+    "createPostButtonText": "Create Post",
+    "createUserButtonText": "Create User",
+
+    "recentPostsPublishedOnLabel": "Published on"
+}
